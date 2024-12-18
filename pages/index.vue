@@ -1,11 +1,9 @@
 <template>
     <div class="tictac">
-        <div class="tictac--topline"></div>
-
         <div class="tictac__body">
 
             <div class="tictac__body--top">
-                <img src="@/assets/img/logo.svg" alt="Логотип" class="logo">
+                <img src="@/assets/img/logo.png" alt="Логотип" class="logo">
 
                 <h1>
                     <span>задай ритм</span>
@@ -17,7 +15,7 @@
                 <h2>Создавай треки и выигрывай классные призы!</h2>
             </div>
 
-            <img src="@/assets/img/mic.svg" class="mic" alt="Микрофон">
+            <!-- <img src="@/assets/img/mic.svg" class="mic" alt="Микрофон"> -->
 
             <div class="tictac__body--bottom">
 
@@ -28,7 +26,6 @@
 
         </div>
 
-        <div class="tictac--bottomline"></div>
     </div>
 </template>
 <script>
@@ -48,6 +45,7 @@ export default {
     width: 100%;
     height: 100vh;
     display: flex;
+    overflow: hidden;
     align-items: flex-start;
     flex-direction: column;
     justify-content: space-between;
@@ -66,7 +64,7 @@ export default {
     }
 
     &__body {
-        padding: 20px 40px;
+        padding: 170px 280px 20px 280px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -74,13 +72,17 @@ export default {
         height: 100%;
         position: relative;
 
+        @media (max-width: 1440px) {
+            padding: 171px 40px 20px 40px;
+        }
+
         @media (max-width: 700px) {
             padding: 20px 15px;
         }
 
         .mic {
             position: absolute;
-            left: 108px;
+            left: 348px;
             z-index: 1;
             bottom: -50px;
 
@@ -143,7 +145,17 @@ export default {
                     font-size: 46px;
                 }
 
-                @media (max-width: 700px) {
+                @media (max-width: 450px) {
+                    font-size: 42px;
+                    margin-top: 12px;
+                }
+
+                @media (max-width: 400px) {
+                    font-size: 40px;
+                    margin-top: 12px;
+                }
+
+                @media (max-width: 375px) {
                     font-size: 38px;
                     margin-top: 12px;
                 }
@@ -152,7 +164,7 @@ export default {
                     font-size: 34px;
                 }
 
-                @media (max-width: 330px) {
+                @media (max-width: 346px) {
                     font-size: 30px;
                 }
 
@@ -168,10 +180,10 @@ export default {
                     margin-left: 10px;
 
                     &::after {
-                        content: url('@/assets/img/wave.svg');
+                        content: url('@/assets/img/wave.png');
 
                         @media (max-width: 700px) {
-                            content: url('@/assets/img/wave_small.svg');
+                            content: url('@/assets/img/wave_small.png');
                         }
                     }
                 }
@@ -197,27 +209,6 @@ export default {
                     font-size: 18px;
                 }
             }
-        }
-    }
-
-    &--topline {
-        background: rgba(0, 0, 0, 0.4);
-        width: 100%;
-        height: 151px;
-
-        @media (max-width: 1024px) {
-            display: none;
-        }
-    }
-
-    &--bottomline {
-        background: rgba(0, 0, 0, 0.4);
-        width: 100%;
-        height: 92px;
-        z-index: 5;
-
-        @media (max-width: 1024px) {
-            display: none;
         }
     }
 }
