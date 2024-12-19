@@ -50,6 +50,10 @@ export default {
     flex-direction: column;
     justify-content: space-between;
 
+    @media (max-width: 1440px) {
+        background-size: 100% 100%;
+    }
+
     @media (max-width: 1024px) {
         background-image: url('@/assets/img/bgpage_tablet.png');
         background-size: 100% 100%;
