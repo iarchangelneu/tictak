@@ -51,11 +51,12 @@ export default {
     justify-content: space-between;
 
     @media (max-width: 1440px) {
-        background-size: 100% 100%;
+        background-position: top;
     }
 
     @media (max-width: 1024px) {
         background-image: url('@/assets/img/bgpage_tablet.png');
+        background-position: unset;
         background-size: 100% 100%;
     }
 
