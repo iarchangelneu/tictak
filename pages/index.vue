@@ -23,7 +23,7 @@
 
                 <span>Перематываем треки, осталось:</span>
             </div>
-
+            <div class="rectangle"></div>
         </div>
 
     </div>
@@ -52,10 +52,12 @@ export default {
 
     @media (max-width: 1024px) {
         background-image: url('@/assets/img/bgpage_tablet.png');
+        background-size: 100% 100%;
     }
 
     @media (max-width: 768px) {
         background-image: url('@/assets/img/bgpage_tablet_vert.png');
+        background-size: cover;
     }
 
     @media (max-width: 450px) {
@@ -64,7 +66,7 @@ export default {
     }
 
     &__body {
-        padding: 170px 280px 20px 280px;
+        padding: 20px 280px 50px 280px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -73,11 +75,20 @@ export default {
         position: relative;
 
         @media (max-width: 1440px) {
-            padding: 171px 40px 20px 40px;
+            padding: 20px 40px 50px 40px;
         }
 
         @media (max-width: 700px) {
             padding: 20px 15px;
+        }
+
+        .rectangle {
+            background: linear-gradient(360deg, #004021 0%, rgba(1, 91, 47, 0) 100%);
+            width: 100%;
+            height: 308px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
         }
 
         .mic {
@@ -100,6 +111,7 @@ export default {
             flex-direction: column;
             gap: 10px;
             width: 100%;
+            z-index: 5;
 
             span {
                 font-weight: 400;
