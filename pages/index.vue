@@ -19,10 +19,10 @@
 
             <div class="tictac__body--bottom">
                 <div class="tictac__body--bottom--text">
-                    <span>Перематываем треки, осталось:</span>
+                    <span>До старта акции осталось:</span>
                 </div>
 
-                <Timer date_to="01.01.2025" />
+                <Timer date_to="01.03.2025" />
 
 
             </div>
@@ -60,17 +60,17 @@ export default {
     @media (max-width: 1024px) {
         background-image: url('@/assets/img/bgpage_tablet.png');
         background-position: unset;
-        background-size: 100% 100%;
+        // background-size: 100% 100%;
     }
 
     @media (max-width: 768px) {
         background-image: url('@/assets/img/bgpage_tablet_vert.png');
-        background-size: cover;
+        // background-size: cover;
     }
 
     @media (max-width: 450px) {
         background-image: url('@/assets/img/bgpage_mob.png');
-        background-size: 100vw 100vh;
+        background-position: center;
     }
 
     &__body {
