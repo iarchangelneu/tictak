@@ -1,5 +1,5 @@
 <template>
-    <div class="tictac" v-show="loaded">
+    <div class="tictac">
         <div class="tictac__body">
 
             <div class="tictac__body--top">
@@ -32,27 +32,6 @@
     </div>
 
 </template>
-<script>
-export default {
-    data() {
-        return {
-            loaded: false,
-        }
-    },
-    async mounted() {
-        await nextTick();
-
-        if (document.readyState === 'complete') {
-            this.loaded = true;
-        } else {
-            window.addEventListener('load', () => {
-                this.loaded = true;
-            });
-        }
-
-    },
-}
-</script>
 <style lang="scss" scoped>
 .tictac {
     content-visibility: auto;

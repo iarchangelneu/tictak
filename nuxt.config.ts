@@ -31,8 +31,8 @@ export default defineNuxtConfig({
           rel: 'stylesheet',
           href: '/css/style.css'
         },
-        { rel: 'preload', href: '/fonts/LoosBlack.otf', as: 'font', type: 'font/truetype', crossorigin: 'anonymous' },
-        { rel: 'preload', href: '/fonts/LoosRegular.otf', as: 'font', type: 'font/truetype', crossorigin: 'anonymous' },
+        { rel: 'preload', href: '/fonts/LoosBlack.otf', as: 'font', crossorigin: 'anonymous' },
+        { rel: 'preload', href: '/fonts/LoosRegular.otf', as: 'font', crossorigin: 'anonymous' },
 
 
 
