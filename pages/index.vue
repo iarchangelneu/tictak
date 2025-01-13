@@ -1,5 +1,5 @@
 <template>
-    <div class="tictac">
+    <div class="tictac" v-show="loaded">
         <div class="tictac__body">
 
             <div class="tictac__body--top">
@@ -35,9 +35,12 @@
 export default {
     data() {
         return {
-
+            loaded: false,
         }
-    }
+    },
+    mounted() {
+        this.loaded = true
+    },
 }
 </script>
 <style lang="scss" scoped>
