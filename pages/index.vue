@@ -55,6 +55,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .tictac {
+    content-visibility: auto;
     background-image: url('@/assets/img/bgpage.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -71,17 +72,21 @@ export default {
     }
 
     @media (max-width: 1024px) {
+        content-visibility: auto;
         background-image: url('@/assets/img/bgpage_tablet.png');
         background-position: unset;
+
         // background-size: 100% 100%;
     }
 
     @media (max-width: 768px) {
+        content-visibility: auto;
         background-image: url('@/assets/img/bgpage_tablet_vert.png');
         // background-size: cover;
     }
 
     @media (max-width: 450px) {
+        content-visibility: auto;
         background-image: url('@/assets/img/bgpage_mob.png');
         background-position: center;
     }
