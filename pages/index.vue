@@ -38,7 +38,8 @@ export default {
             loaded: false,
         }
     },
-    mounted() {
+    async mounted() {
+        await nextTick();
         this.loaded = true
     },
 }
