@@ -40,7 +40,15 @@ export default {
     },
     async mounted() {
         await nextTick();
-        this.loaded = true
+
+        if (document.readyState === 'complete') {
+            this.loaded = true;
+        } else {
+            window.addEventListener('load', () => {
+                this.loaded = true;
+            });
+        }
+
     },
 }
 </script>
